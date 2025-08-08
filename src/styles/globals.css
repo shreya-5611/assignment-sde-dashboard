@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #1a1a2e;
+    color: #ffffff;
+  }
+  
+  #root {
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Leaflet overrides */
+  .leaflet-container {
+    background: #0f1419;
+  }
+  
+  .leaflet-tile {
+    filter: brightness(0.8) saturate(0.5) contrast(1.2);
+  }
+  
+  .leaflet-control-zoom {
+    background: rgba(0, 0, 0, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+  }
+  
+  .leaflet-control-zoom a {
+    background: transparent;
+    color: #ffffff;
+    border: none;
+  }
+  
+  .leaflet-control-zoom a:hover {
+    background: rgba(114, 46, 209, 0.3);
+    color: #ffffff;
+  }
+  
+  .leaflet-popup-content-wrapper {
+    background: rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .leaflet-popup-tip {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Ant Design dark theme customizations */
+  .ant-slider-rail {
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .ant-slider-track {
+    background: linear-gradient(90deg, #722ed1, #9254de);
+  }
+  
+  .ant-slider-handle {
+    border: 2px solid #722ed1;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(114, 46, 209, 0.5);
+  }
+  
+  .ant-slider-handle:hover,
+  .ant-slider-handle:focus {
+    border-color: #9254de;
+    box-shadow: 0 0 15px rgba(114, 46, 209, 0.8);
+  }
+  
+  .ant-btn-primary {
+    background: linear-gradient(135deg, #722ed1, #9254de);
+    border-color: #722ed1;
+    box-shadow: 0 4px 15px rgba(114, 46, 209, 0.3);
+  }
+  
+  .ant-btn-primary:hover {
+    background: linear-gradient(135deg, #9254de, #b37feb);
+    border-color: #9254de;
+    box-shadow: 0 6px 20px rgba(114, 46, 209, 0.5);
+  }
+  
+  .ant-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+  }
+  
+  .ant-input {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+  }
+  
+  .ant-input:focus,
+  .ant-input:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #722ed1;
+  }
+  
+  .ant-select-selector {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #ffffff !important;
+  }
+  
+  .ant-select-arrow {
+    color: #ffffff;
+  }
+  
+  .ant-select-dropdown {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Custom components */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  
+  .gradient-button {
+    background: linear-gradient(135deg, #722ed1, #9254de);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+  }
+  
+  .gradient-button:hover {
+    background: linear-gradient(135deg, #9254de, #b37feb);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(114, 46, 209, 0.4);
+  }
+  
+  .gradient-button:disabled {
+    background: rgba(255, 255, 255, 0.2);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Loading animations */
+  @keyframes pulse {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .loading-pulse {
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slide-in {
+    animation: slideIn 0.3s ease-out;
+  }
